@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notify Me</title>
+</head>
+
+<body>
+    <input type="text" id="body" value="How Are You Doing?">
+    <input type="text" id="title" value="Hi There!">
+    <input type="button" value="Notify!" onclick="notifyMe()">
+</body>
+
+</html>
+<script>
+    function notifyMe() {
+        if (!window.Notification) {
+            return console.log('Browser does not support notifications.')
+        }
+
+        const GRANTED = 'granted';
+        const title = document.getElementById('title').value;
+        const body = document.getElementById('body').value;
+        const icon = 'https://bit.ly/2DYqRrh';
+
+        const notificationPermission = permission => {
+            if (permission !== GRANTED) {
+                return console.log('User Blocked notifications.');
+            }
+            new Notification(title, { body, icon });
+        };
+
+        if (Notification.permission !== GRANTED) {
+            return Notification.requestPermission()
+                .then(notificationPermission)
+                .catch(console.error);
+        }
+        new Notification (title, {body, icon});
+    }
+</script>
