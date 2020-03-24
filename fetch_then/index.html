@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- theme-color -->
+    <meta name="theme-color" content="#fff" />
+    <!-- end-theme-color -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- register service worker -->
+    <!-- <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(() => {
+                        console.log("[ PWA Fire Bundle ] Service Worker Registered");
+                    });
+            });
+        }
+    </script> -->
+
+    <!-- start of web manifest -->
+    <!-- <link rel="manifest" href="./app.webmanifest"> -->
+    <!-- end of web manifest -->
+
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() { }
+    </script>
+
+    <title>Hack Club-Kenya</title>
+</head>
+
+<body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <a class="navbar-brand" href="#">
+            <strong>Hack Club Kenya</strong>
+            <!-- <img id="navbar_logo" src="https://hackclub.com/logo-red.svg" alt=""> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://hackclub.com/" target="_blank" rel="noopener">About Us</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="mentors.html">Mentors</a>
+                </li> -->
+                <!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> -->
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="https://twitter.com/hackclubke?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+                        data-show-count="false">Follow @hackclubke</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="https://twitter.com/intent/tweet?button_hashtag=HackClubKe&ref_src=twsrc%5Etfw"
+                        class="twitter-hashtag-button" data-show-count="false">Tweet #HackClubKe</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </li> -->
+            </ul>
+
+            <!-- <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="my-form">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="img">
+                            <img src="https://hackclub.com/orpheus_flag.svg" class="center" alt="">
+                        </div>
+                        <div class="center" id="mentor_header">
+                            <h5 style="text-align:center">Want to Join Us as a Mentor?</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="firtstName">First Name</label>
+                                    <input type="text" id="firstName" class="form-control" placeholder="First name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" class="form-control" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact">Phone Number</label>
+                                <input type="text" inputmode="numeric" pattern="[0-9]*" class="form-control"
+                                    id="contact" placeholder="0711225588" autocomplete="one-time-code">
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Type</label>
+                                <select class="form-control" id="type">
+                                    <option selected>--Select--</option>
+                                    <option value="Student">University Student</option>
+                                    <option value="Graduate">University Graduate</option>
+                                    <option value="Developer">Developer</option>
+                                    <option value="Organization">Organization</option>
+                                </select>
+                            </div>
+                            <div class="form-group" id="uni" style="display: none" required>
+                                <label for="uni">Which University are you in?</label>
+                                <input type="text" class="form-control" id="uni" placeholder="JKUAT">
+                            </div>
+                            <div class="form-group" id="grad" style="display: none" required>
+                                <label for="grad">Which University did you graduate from? </label>
+                                <input type="text" class="form-control" id="grad" placeholder="JKUAT">
+                            </div>
+                            <div class="form-group" id="org" style="display: none" required>
+                                <label for="org">Which organization do you represent or part of?</label>
+                                <input type="text" class="form-control" id="org" placeholder="Google">
+                            </div>
+                            <div class="form-group" id="dev" style="display: none" required>
+                                <label for="dev">As a developer, what is your stack?</label>
+                                <input type="text" class="form-control" id="dev"
+                                    placeholder="NodeJS, React, Angular, etc">
+                            </div>
+                            <label for="pitch">Which track (IoT, Web Dev, Cyber Sec) do you choose & why should you be
+                                choosen as a mentor for Hack Club Kenya?</label>
+                            <textarea class="form-control" id="pitch"
+                                placeholder="Tell us more about yourself and what makes you unique?"
+                                required></textarea>
+                            <div class="invalid-feedback">
+                                Please enter a message in the textarea.
+                            </div>
+                            <div class="form-group" id="avail">
+                                <label for="type">Will you be available for a Mentor's Training Session? (Date TBC)
+                                </label><br>
+                                <input type="radio" id="avail1" name="avail" value="Yes" required>
+                                <label for="avail1">Yes</label><br>
+                                <input type="radio" id="avail2" name="avail" value="No" required>
+                                <label for="avail2">No</label><br>
+                                <input type="radio" id="avail3" name="avail" value="Maybe" required>
+                                <label for="avail3">Maybe</label><br>
+                            </div>
+                            <div class="buttonHolder">
+                                <input type="button" id="submit" name="submit" class="btn btn-primary" value="Submit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div >
+            <a class="twitter-timeline" href="https://twitter.com/hackclubke?ref_src=twsrc%5Etfw" data-tweet-limit="3">Tweets by
+                hackclubke</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div> -->
+    </div>
+    <!-- <footer class="footer mt-auto py-3 navbar-light bg-light">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer> -->
+</body>
+<script>
+    $(document).ready(function () {
+
+        $("#type").change(function () {
+            if ($(this).val() == "Student") {
+                $("div#uni").show();
+            } else {
+                $("div#uni").hide();
+            }
+        });
+
+        $("#type").change(function () {
+            if ($(this).val() == "Graduate") {
+                $("div#grad").show();
+            } else {
+                $("div#grad").hide();
+            }
+        });
+
+        $("#type").change(function () {
+            if ($(this).val() == "Developer") {
+                $("div#dev").show();
+            } else {
+                $("div#dev").hide();
+            }
+        });
+
+        $("#type").change(function () {
+            if ($(this).val() == "Organization") {
+                $("div#org").show();
+            } else {
+                $("div#org").hide();
+            }
+        });
+
+        $("#submit").on('click', function (e) {
+            e.preventDefault();
+
+            var fname = document.getElementById("firstName").value
+            var lname = document.getElementById("lastName").value
+            var email = document.getElementById("email").value
+            var phone = document.getElementById("contact").value
+            var type = document.getElementById("type").value
+            var pitch = document.getElementById("pitch").value
+
+            var uni = ($('input#uni').val())
+            var grad = ($('input#grad').val())
+            var dev = ($('input#dev').val())
+            var org = ($('input#org').val())
+
+            var avail = $("input[name='avail']:checked").val();
+
+            if (fname != "" && lname != "" && email != "" && phone != "" && type != "" && pitch != "" && (uni != "" || grad != "" || dev != "" || org != "")) {
+                $("#submit").attr("disabled", true);
+
+                let formData = { fname: fname, lname: lname, email: email, phone: phone, type: type, uni: uni, grad: grad, dev: dev, org: org, avail: avail, pitch: pitch }
+
+                let fd = new FormData();
+
+
+                formData.forEach(i => {
+                    fd.append(i, formData[i]);
+                })
+
+                // Post Method With Data Example
+                fetch('https://hclubkenya.000webhostapp.com/processentry.php', {
+                    method: 'post',
+                    body: fd,
+                    mode: "cors"
+                })
+                    .then(function (res) {
+                        return res.text();
+                    })
+                    .then(function (data) {
+                        if (data == 'Successful Registration') {
+                            alert("Thank you for registering with Hack Club Kenya")
+                            self.location.href = 'index.html';
+                        } else if (data == 'This email already exists!') {
+                            alert("This email already exists");
+                            $("#submit").attr("disabled", false);
+                        } else {
+                            alert(data);
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log('Request failed, Error ' + error);
+                    });
+            } else {
+                alert("Kindly fill in the fields");
+            }
+        })
+    });
+</script>
+
+</html>
