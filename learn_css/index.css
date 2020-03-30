@@ -1,0 +1,40 @@
+html {
+    background-color: slateblue;
+}
+section{
+    padding: 20px;
+}
+.box {
+    /* text-align: center; */
+    width: 200px;
+    height: 200px;
+    /* margin: 5px; */
+}
+.info {
+    padding: 20px;
+}
+.tomato{
+    background-color: tomato;
+    float: left;
+    width: 20%;
+    height: 600px;
+}
+.purple {
+    background-color: purple;
+    float: right;
+    width: 80%;
+}
+.yellow {
+    background-color: yellow;
+    clear: right;
+    float: right;
+    width: 80%;
+}
+.green {
+    background-color: teal;
+    float: right;
+    width: 80%;
+}
+.clearfix {
+    clear: both;
+}
