@@ -1,0 +1,15 @@
+.containing-div {
+    background-color: #d2b48c;
+    display: block;
+    height: auto;
+    overflow: auto;
+  }
+  .floating-div {
+    /* float: left; */
+    width: 50%;
+  }
+  .floating-div ul {
+    display: inline-block;
+    height: auto;
+  }
+  
