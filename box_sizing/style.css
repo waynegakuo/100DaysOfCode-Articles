@@ -1,9 +1,16 @@
-div {
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 20rem);
+    grid-gap: 1rem;
+    grid-auto-flow: dense;
+}
+.content, .box1, .box2, .box3 {
     width: 160px;
     height: 80px;
     padding: 60px;
     border: 8px solid red;
     background: yellow;
+    margin: 5px;
   }
 
 .content {
@@ -11,5 +18,11 @@ div {
     
 }
 .box1 {
+    box-sizing: border-box;
+}
+.box2 {
+    box-sizing: border-box;
+}
+.box3 {
     box-sizing: border-box;
 }
