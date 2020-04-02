@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Resize Image Proportionally with CSS</title>
+<style>
+    img{
+        max-width: 100%;
+        max-height: 100%;
+        display: block; /* remove extra space below image */
+    }
+    .box{
+        width: 250px;        
+        border: 5px solid black;
+    }    
+    .box.large{
+        height: 300px;
+    }
+    .box.small{
+        height: 100px;
+    }
+</style>
+</head>
+<body>
+    <h2>Image inside Auto-height Div</h2>
+    <div class="box">
+        <img src="sky.jpg" alt="Cloudy Sky">
+    </div>
+    <br>
+    <h2>Image inside Portrait Div</h2>
+    <div class="box large">
+        <img src="sky.jpg" alt="Cloudy Sky">
+    </div>
+    <br>
+    <h2>Image inside Landscape Div</h2>
+    <div class="box small">
+        <img src="sky.jpg" alt="Cloudy Sky">
+    </div>
+    <p><strong>Note:</strong> The original size of the image is 500x300 pixels, but using the "max-width" and "max-height" property we are still able to show the complete image inside the DIVs having different width.</p>
+</body>
+</html>                            
