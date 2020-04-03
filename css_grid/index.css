@@ -1,8 +1,8 @@
 .wrapper {
+    width: fit-content;
     display: grid;
     /* grid-template-columns: 10rem 10rem 10rem; */
     grid-template-columns: repeat(3, 10rem);
-
     /* taking up as much space as they can while still fitting in three columns */
     /* grid-template-columns: 1fr 1fr 1fr; */
 
