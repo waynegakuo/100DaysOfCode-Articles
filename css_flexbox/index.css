@@ -1,20 +1,49 @@
 .container {
     border: 5px solid #ffcc5c;
     display: flex;
+    /* flex-wrap: wrap; */
+    /* height: 100%; */
+    /* default justify content is flex-start. Justify content is used to control items on the x-axis (main axis) when flex
+    direction is row. If the flex direction is column, it controls items on the y-axis */
+    /* flex-start flex-end center space-around 
+    space-between space-evenly */ 
+    /* justify-content: flex-end;  */
+
+    /* by default, align items are set to stretch. Align items is used to control items on the y-axis(cross axis) when flex
+    direction is row. If the flex direction is column, it controls items on the x-axis */
+    /* align-items: center; */
+
+    /* by default, order is 0. Any other value higher than 0 makes the item move towards the end. Any value less than 0 makes 
+    the item move towards the start the beginning */
+
+    /* flex-direction: column; */
+
   }
 
+  /* .logout {
+    margin-left: auto;
+    align-self: flex-start;
+    order: 1;
+  } */
+
+  /* .home {
+    margin-right: auto;
+    align-self: flex-end;
+  } */
 
   .container > div {
     padding: 10px;
     text-align: center;
     font-size: 2em;
     color: #ffeead;
+    /* width: 300px; */
     /* flex: 1 */
   }
   
   html, body {
     background-color: #ffeead;
     margin: 10px;
+    height: 100%;
   }
   
   .container > div:nth-child(1) {
