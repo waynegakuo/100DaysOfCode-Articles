@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining in JavaScript</title>
+
+    <script>
+        const adventurer = [
+            {
+                name: 'Alice',
+                cat: {
+                    name: 'Dinah'
+                }
+            }
+        ];
+
+        const someNonExistentMethod = () => { console.log('Hey Method') }
+
+        const adventurer2 =
+        {
+            name: 'Alice',
+            cat: {
+                name: 'Dinah'
+            },
+
+        };
+
+        const dogName = adventurer[0].cat?.name
+        const dogName2 = adventurer2.cat?.name
+        console.log(dogName);
+        console.log('Dog Name 2: ', dogName);
+
+
+        console.log(adventurer2.someNonExistentMethod?.() ?? 'Does not exist') 
+    </script>
+</head>
+
+<body>
+    <h2>Optional Chaining with Nullish Coalescing</h2>
+
+    <p>By using the ?. operator instead of just ., JavaScript knows to implicitly check to be sure obj.first is not null
+        or undefined before attempting to access obj.first.second. If obj.first is null or undefined, the expression
+        automatically short-circuits, returning undefined</p>
+
+    <p>The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its
+        left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.</p>
+
+</body>
+
+</html>
