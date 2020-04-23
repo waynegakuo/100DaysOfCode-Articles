@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Code</title>
+
+    <script>
+        const states = {
+            AWAY: "#fcab12",
+            ONLINE: "#59c09d",
+            OFFLINE: "#999999",
+            DEFAULT: "#2a2734"
+        }
+
+        const getStatus = (action="DEFAULT") => {
+            return states[action]
+        }
+
+        console.log(getStatus());
+    </script>
+</head>
+<body>
+    <p>By default, the state would be DEFAULT unless the function is given a different parameter ( <b>check console in web dev tools</b> )</p>
+    
+</body>
+</html>
