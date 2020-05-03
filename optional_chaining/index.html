@@ -22,15 +22,32 @@
         {
             name: 'Alice',
             cat: {
-                name: 'Dinah'
+                name: 'Tipsy'
             },
 
         };
 
+        const resident = {
+            name: 'John',
+            address: {
+                city: 'Mombasa',
+                town: 'Mishomoroni'
+            },
+            gender: 'Male'
+        }
+
         const dogName = adventurer[0].cat?.name
         const dogName2 = adventurer2.cat?.name
         console.log(dogName);
-        console.log('Dog Name 2: ', dogName);
+        console.log('Dog Name 2: ', dogName2);
+
+        const operand = resident && resident.address && resident.address.apartment
+
+        const optionalCh = resident?.address?.appartment;
+
+        console.log('Optional Chaining: ', optionalCh);
+
+        console.log('&& operand: ', operand);
 
 
         console.log(adventurer2.someNonExistentMethod?.() ?? 'Does not exist') 
