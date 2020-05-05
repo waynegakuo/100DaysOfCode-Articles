@@ -19,14 +19,15 @@ function getPosts() {
     }, 1000);
 }
 
-function createPost(post) {
+function createPost(post, callback) {
     setTimeout(() => {
-        posts.push(post)
+        posts.push(post);
+        callback();
     }, 2000);
 }
 
-getPosts();
+// getPosts();
 
-createPost ({title: 'Post Three', body: 'This is the third post'});
+createPost ({title: 'Post Three', body: 'This is the third post'}, getPosts);
 
 // Posts shown on the site will still be two since the create function boots up a second later after getPosts()
