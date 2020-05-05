@@ -46,14 +46,27 @@ function createPost(post) {
 // Async await: a way to handle responses
 // the function needs to be labelled "async" if we want to use await iniside of it 
 
-async function init() {
-    await createPost({ title: 'Post Three', body: 'This is the third post' });
+// async function init() {
+//     await createPost({ title: 'Post Three', body: 'This is the third post' });
 
-    getPosts();
-    // We are awaiting for the createPost function to be executed before getPosts is called 
+//     getPosts();
+//     // We are awaiting for the createPost function to be executed before getPosts is called 
+// }
+
+// init()
+
+// Async / Await / Fetch
+
+async function fetchUsers () {
+    const res = await fetch ('https://jsonplaceholder.typicode.com/users');
+
+    const data = await res.json();
+
+    console.log(data)
 }
 
-init()
+fetchUsers()
+
 
 // Promise.all
 // const promise1 = Promise.resolve('Hello World');
