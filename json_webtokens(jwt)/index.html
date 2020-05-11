@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Web Tokens</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav>
+        <p>JSON Web Token</p>
+
+        <button class="burger" id="burger">
+            &#9776
+        </button>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7Q17ubqLfaM" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>JSON Web Token, famously known as <b>JWT</b>, are used for <b>authorization</b> & <b>NOT</b>
+            <b>authentication</b></p>
+        <p><b>Authentication: </b>Logging in a user ~ use of username & passowrd</p>
+        <p><b>Authorization: </b>Esnuring that the the user sending requests to your server is the same user that logged
+            in
+            during the authentication process</p>
+        <p>This is done using JWT</p>
+        <img src="jwt.png" alt="JWT Explained" style="width: 50%; height: 50%;">
+        <br>
+        <p>The token created has the user's information in it in encoded form</p>
+        <p><b>Heder.Payload.SecretKey</b></p>
+        <img src="jwt3.png" alt="JWT Explained" style="width: 50%; height: 50%;">
+        <br>
+        <p>In JWT, we can use one token to be able to be authorized in another server, say of the same organization</p>
+        <img src="jwt2.png" alt="JWT Explained" style="width: 50%; height: 50%;">
+        <p>When logging into server 1, as usual, the token is created and the token sent to the client to be stored. The
+            user can use this token to access information say from server 2 since they belong to the same organization
+        </p>
+        <p><b>How?</b></p>
+        <p>The <b>secret key</b> used to generate the token is usually stored in the servers. The same secret key can
+            also
+            be stored in another server especially cases where you'd want to have the users have seamless authorization
+            in
+            accessing certain resources</p>
+        <p>When a request is sent to the server, the secret key is used to decrypt the the token since it's the same key
+            that was used to encrypt it during login. The same token (since it's stored on the client side) can be used
+            to
+            access information in the other server, as long as the other server has the same secret key.</p>
+        <p>The token can be destroyed or expire based on the EAT(Expired At) specified in the payload</p>
+
+        <p>Use cases can also be when the company has too many users and therefore has various servers in case there
+            could be high data traffic. The <b>Load Balancers</b> would kick in and reroute other users to the second
+            server but will still be able to access information due to fast authorization due to having the token on the
+            client </p>
+    </div>
+</body>
+
+</html>
