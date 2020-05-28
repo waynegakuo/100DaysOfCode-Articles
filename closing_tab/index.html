@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closing the Tab Notification</title>
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div>
+        <span id="coordinates"></span>  
+    </div>
+    <script>
+        var mouseX = 0;
+        var mouseY = 0;
+        var popupCounter = 0;
+
+        
+
+        $(document).mouseleave(function () {
+            if (mouseY < 100) {
+                if (popupCounter < 1) {
+                    alert("Please don't close the tab!");
+                }
+                popupCounter++;
+            }
+        });
+    </script>
+</body>
+
+</html>
