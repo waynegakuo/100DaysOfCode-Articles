@@ -1,0 +1,64 @@
+.container-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container-2__wrap{
+    flex-wrap: wrap;
+}
+footer {
+    /* flex direction starts at row since it's a web view */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+}
+
+.about-us {
+    text-align: center;
+    border: 2px solid orange;
+    border-radius: 5px;
+    width: 50%;
+    height: 150px;
+    padding: 10px;
+    margin: 5px;
+}
+.contact-links {
+    /* Flex properties since you have items(links) in a column */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Beautifying */
+    border: 2px solid orange;
+    border-radius: 5px;
+    width: 50%;
+    height: 150px;
+    padding: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 10px;
+}
+li {
+    padding: 5px;
+    list-style: none;
+}
+
+/* responsiveness */
+@media (max-width: 480px) {
+    footer {
+        /* change the flex direction to column since you need mobile users to scroll  */
+        flex-direction: column;
+    }
+    .about-us{
+        width: 100%;
+    }
+    .contact-links {
+        width: 100%;
+    }
+}
