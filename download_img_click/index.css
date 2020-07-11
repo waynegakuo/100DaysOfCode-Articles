@@ -1,0 +1,19 @@
+.content {
+    padding: 10px;
+    display: flex;
+    /* height: 100vh; */
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-section {
+    width: 50%;
+}
+
+.downloadable {
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+}
