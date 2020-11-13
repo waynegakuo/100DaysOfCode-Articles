@@ -30,3 +30,75 @@ burger.addEventListener('click', () => {
     console.log('User has selected country name: ', countryValue);
     alert('User has selected country name: ' + countryValue);
 });
+
+const getPerson = () => {
+  return;
+  {
+    fullName: 'Wayne Gakuo';
+  }
+};
+
+// console.log(getPerson());
+
+async function getUsers() {
+    const result = await fetch('https://jsonplaceholder.typicode.com/users', {
+    });
+    
+    const data = await result.json();
+  
+    const users = data;
+  
+    users.forEach(async (i) => {
+      const res = await fetch(
+        `https://jsonplaceholder.typicode.com/users/${i.id}`
+      );
+      const datas = await res.json();
+      console.log(datas.name);
+    });
+    // return users;
+  }
+  
+  getUsers();
+  
+  async function printUsers() {
+    const res = await getUsers();
+    console.log('Hey there', res);
+  }
+  // printUsers()
+  
+  let user = {
+    //create the user object
+    showAccess: true, //create and set showAccess property of user
+  };
+  let premiumUser = {
+    //repeat of the above for this object
+    ads: false,
+  };
+  
+  premiumUser.__proto__ = user; //user is the prototype of premiumUser
+  
+  console.log(premiumUser.showAccess); // "true"
+  
+  // // Closures
+  const getSecret = (secret) => {
+    return {
+      get: () => secret,
+    };
+  };
+  const obj = getSecret(25);
+  
+  obj.get();
+
+  
+  const hello = (message) => {
+    message = String (message)
+    return (typeof message)
+  }
+  hello (1)
+  
+  let response = await fetch('/article/fetch/post/image', {
+          method: 'POST',
+          body: blob
+        });
+  
+  

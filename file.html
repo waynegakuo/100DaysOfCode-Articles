@@ -1,0 +1,92 @@
+<!-- CREATE ACCOUNT STEP -->
+                <mat-step formGroupName="0" [stepControl]="loanApplicationArray?.get([0])">
+                    <ng-template matStepLabel>Create Profile</ng-template>
+
+
+                    <span>What loan are you intending to apply for?</span>
+
+
+
+                    <label>First Name</label>
+                    <input type="text" placeholder="First name" formControlName="firstName">
+
+                    <div *ngIf="firstName.invalid && firstName.touched">
+                        <small *ngIf="firstName.errors?.required" class="text-danger">First name is
+                            required</small>
+                        <small *ngIf="firstName.errors?.minlength" class="text-danger">First name must be
+                            at least 3 characters long</small>
+                    </div>
+
+                    <label>Middle Name</label>
+                    <input type="text" placeholder="Middle name" formControlName="middleName">
+
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Last name" formControlName="lastName">
+                    <div *ngIf="lastName.invalid && lastName.touched">
+                        <small *ngIf="lastName.errors?.required" class="text-danger">Last Name is required</small>
+                        <small *ngIf="lastName.errors?.email" class="text-danger">Last name must be at least 3
+                            characters long</small>
+                    </div>
+
+                    <label>Email</label>
+                    <input type="email" placeholder="Email address" formControlName="email">
+                    <div *ngIf="email.invalid && email.touched">
+                        <small *ngIf="email.errors?.required" class="text-danger">Email address is required</small>
+                        <small *ngIf="email.errors?.email" class="text-danger">Please provide a valid email
+                            address</small>
+                    </div>
+
+                    <label>Phone Number</label>
+                    <input type="number" placeholder="Phone Number" formControlName="mobile" required>
+                    <div *ngIf="mobile.invalid && mobile.touched">
+                        <small *ngIf="mobile.errors?.required" class="text-danger">Mobile Number is required</small>
+                        <small *ngIf="mobile.errors?.maxLength" class="text-danger">Phone number cannot be more than 10
+                            digits</small>
+                    </div>
+
+                    <label>Password</label>
+                    <input type="password" placeholder="Password" formControlName="password">
+                    <label>Confirm Password</label>
+
+                    <input [ngClass]="{'is-invalid': passwordValidatorControls.errors?.misMatch}"
+                        formControlName="confirmPassword" type="password" placeholder="Confirm Password">
+                    <small class="text-danger" *ngIf="passwordValidatorControls.errors?.misMatch">Passwords do not
+                        match</small>
+
+                    <div class="checks">
+                        <div class="t-and-c">
+                            <input type="checkbox" name="terms" formControlName="termsCheck">
+                            <span>You have read and understood the terms and conditions of the online Loan
+                                application.</span>
+                        </div>
+
+                        <div *ngIf="termsCheck.invalid && termsCheck.untouched">
+                            <small *ngIf="termsCheck.errors?.required" class="text-danger">You are required to check the
+                                box</small>
+                            <small *ngIf="termsCheck.errors?.requiredTrue" class="text-danger">You need to select the
+                                box</small>
+                        </div>
+
+                        <div class="data-privacy">
+                            <input type="checkbox" name="data" formControlName="dataCheck">
+                            <span>You agree that the information you provide is given voluntarily and will be used for
+                                the
+                                sole purpose of loan appraisal. You agree to have your information stored for purposes
+                                of
+                                saving & continuing your loan application anytime as per our data privacy policy.</span>
+                        </div>
+
+                        <div *ngIf="dataCheck.invalid && dataCheck.untouched">
+                            <small *ngIf="dataCheck.errors?.required" class="text-danger">You are required to check the
+                                box</small>
+                            <small *ngIf="dataCheck.errors?.requiredTrue" class="text-danger">You need to select the
+                                box</small>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <button mat-button matStepperNext type="button" style="margin-left: 10px;">Next</button>
+                    </div>
+
+                </mat-step>
